@@ -31,7 +31,7 @@
         /// Runs the job on the given business day of the month (excludes Saturdays and Sundays).
         /// </summary>
         /// <param name="day">The day (1 through the number of days in month).</param>
-        public MonthOnWeekDayOfMonthUnit OnBusinessDay(int day)
+        public MonthOnWeekDayOfMonthUnit OnWeekDay(int day)
         {
             return new MonthOnWeekDayOfMonthUnit(Schedule, _duration, day);
         }

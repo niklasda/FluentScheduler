@@ -16,7 +16,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(2).Months().OnBusinessDay(3);
+            schedule.ToRunEvery(2).Months().OnWeekDay(3);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
@@ -32,7 +32,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(2).Months().OnBusinessDay(1);
+            schedule.ToRunEvery(2).Months().OnWeekDay(1);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
@@ -48,7 +48,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(1).Months().OnBusinessDay(31);
+            schedule.ToRunEvery(1).Months().OnWeekDay(31);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
@@ -64,7 +64,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(2).Months().OnBusinessDay(1).At(3, 15);
+            schedule.ToRunEvery(2).Months().OnWeekDay(1).At(3, 15);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
@@ -80,7 +80,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(2).Months().OnBusinessDay(-1);
+            schedule.ToRunEvery(2).Months().OnWeekDay(-1);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
@@ -96,7 +96,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(3).Months().OnBusinessDay(1).At(3, 15);
+            schedule.ToRunEvery(3).Months().OnWeekDay(1).At(3, 15);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
@@ -112,7 +112,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(3).Months().OnBusinessDay(1).At(3, 15);
+            schedule.ToRunEvery(3).Months().OnWeekDay(1).At(3, 15);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
@@ -128,7 +128,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(1).Months().OnBusinessDay(1).At(3, 15);
+            schedule.ToRunEvery(1).Months().OnWeekDay(1).At(3, 15);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
@@ -144,7 +144,7 @@ namespace FluentScheduler.Tests.UnitTests.ScheduleTests
 
             // Act
             var schedule = new Schedule(() => { });
-            schedule.ToRunEvery(3).Months().OnBusinessDay(2).At(3, 15);
+            schedule.ToRunEvery(3).Months().OnWeekDay(2).At(3, 15);
             var actual = schedule.CalculateNextRun(input);
 
             // Assert
