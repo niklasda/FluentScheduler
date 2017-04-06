@@ -54,6 +54,11 @@
 
         internal static DateTime NextNWeekday(this DateTime current, int toAdvance)
         {
+            if (toAdvance < 0)
+            {
+                return PreviousNWeekday(current, -toAdvance);
+            }
+
             while (toAdvance >= 1)
             {
                 toAdvance--;
@@ -61,6 +66,19 @@
 
                 while (!current.IsWeekday())
                     current = current.AddDays(1);
+            }
+            return current;
+        }
+
+        private static DateTime PreviousNWeekday(this DateTime current, int toReverse)
+        {
+            while (toReverse >= 1)
+            {
+                toReverse--;
+                current = current.AddDays(-1);
+
+                while (!current.IsWeekday())
+                    current = current.AddDays(-1);
             }
             return current;
         }

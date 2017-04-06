@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FolderCleaner">
-      <HintPath>..\packages\FolderCleaner.1.0.1\lib\FolderCleaner.dll</HintPath>
-    </Reference>
     <Reference Include="Fresh, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Fresh.2.0.0\lib\Fresh.dll</HintPath>
       <Private>True</Private>
